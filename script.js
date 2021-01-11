@@ -11,6 +11,12 @@ snake[0] ={
 
 let direction = "right";
 
+let food ={
+    x: Math.floor(Math.random() * 15 + 1) * box,
+    y: Math.floor(Math.random() * 15 + 1) * box
+}
+
+
 function criarBG(){
     context.fillStyle = "lightgreen";
     context.fillRect(0, 0, 16*box, 16*box); //desenha o retângulo usando x e y e a largura e altura setadas
@@ -23,6 +29,12 @@ function criarCobrinha (){
     }
 }
 
+function drawFood (){
+    context.fillStyle = "red";
+    context.fillRect(food.x, food.y, box, box);
+}
+
+//quando um evento acontece, detecta e chama uma função
 document.addEventListener("keydown",update);
 
 function update (event){
@@ -41,6 +53,7 @@ function iniciarJogo(){
 
     criarBG();
     criarCobrinha();
+    drawFood();
 
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
@@ -57,7 +70,7 @@ function iniciarJogo(){
         y: snakeY
     };
 
-    snake.unshift(newHead);
+    snake.unshift(newHead); //método unshift adiciona como primeiro quadradinho da cobrinha
 }
 
 let jogo = setInterval(iniciarJogo,100); //100 milliseconds
