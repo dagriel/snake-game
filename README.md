@@ -12,4 +12,4 @@ Aula Front-end de JavaScript da [Gabriela Pinheiro](https://github.com/SpruceGab
 
 ![imagem](img/screenshot-550_1.png)
 
-### DISPONÍVEL EM: [https://github.com/dagriel/snake-game](https://github.com/dagriel/snake-game)
+### DISPONÍVEL EM: [https://dagriel.github.io/snake-game](https://dagriel.github.io/snake-game)
